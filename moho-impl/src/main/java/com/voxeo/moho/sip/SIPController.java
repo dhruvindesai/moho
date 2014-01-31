@@ -58,7 +58,7 @@ public class SIPController extends SipServlet {
       // msctrl.min.threadpool , msctrl.max.threadpool used to set thread pool
       // size of 309
       final Properties p = new Properties();
-      final Driver driver = DriverManager.getDrivers().next();
+      final Driver driver = DriverManager.getDriver("com.radisys.rsys309");
       if (driver.getFactoryPropertyInfo() != null) {
         for (final PropertyInfo info : driver.getFactoryPropertyInfo()) {
           String value = getInitParameter(info.name);
